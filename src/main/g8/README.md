@@ -47,10 +47,9 @@ You can also start a *Scala console* (`scala>` prompt) to play with small snippe
 Welcome to Scala 2.12.8 (OpenJDK 64-Bit Server VM, Java 1.8.0_202).
 Type in expressions for evaluation. Or try :help.
 
-scala> import cats._, cats.implicits._, cats.data._
-import cats._
-import cats.implicits._
-import cats.data._
+scala> import cats.instances.string._, cats.syntax.semigroup._
+import cats.instances.string._
+import cats.syntax.semigroup._
 
 scala> "Hello " |+| "Cats!"
 res0: String = Hello Cats!
