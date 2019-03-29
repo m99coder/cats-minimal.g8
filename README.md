@@ -1,13 +1,13 @@
-# Cats Seed
+# Cats Minimal
 
 Minimal Giter8 template to get you set up with Cats.
 
-Copyright 2017 Underscore Consulting LLP. Licensed [CC0 1.0][license].
+Copyright 2017 Underscore Consulting LLP. Licensed [CC0 1.0][license].  
 Copyright 2019 Marco Lehmann. Licensed [CC0 1.0][license].
 
 ## Getting Started
 
-You’ll need to [SBT][sbt] 1.2.8 or higher to use this template.
+You’ll need [SBT][sbt] 1.2.8 or higher to use this template.
 
 Run the following shell command:
 
