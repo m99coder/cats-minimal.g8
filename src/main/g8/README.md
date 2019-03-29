@@ -13,23 +13,30 @@ Start SBT using the `sbt` command to enter SBT’s *interactive mode* (`>` promp
 ```bash
 \$ sbt
 [info] Loading global plugins from <DIRECTORY>
-[info] Loading project definition from <DIRECTORY>
-[info] Set current project to <PROJECT_NAME>
-
->
+[info] Loading settings for project $name;format="lower,hyphen"$-build from plugins.sbt ...
+[info] Loading project definition from <DIRECTORY>/project
+[info] Updating ProjectRef(uri("file:<DIRECTORY>/project/"), "$name;format="lower,hyphen"$-build")...
+[info] Done updating.
+[info] Loading settings for project $name;format="lower,hyphen"$ from build.sbt ...
+[info] Set current project to cats-minimal (in build file:<DIRECTORY>)
+[info] sbt server started
+sbt:$name;format="lower,hyphen"$>
 ```
 
 From the SBT prompt you can run the code in `Main.scala`:
 
 ```bash
-> run
-[info] Updating {file:<DIRECTORY>}cats-sandbox...
-[info] Resolving jline#jline;2.14.4 ...
+sbt:$name;format="lower,hyphen"$> run
+
+[info] Updating ...
 [info] Done updating.
-[info] Compiling 1 Scala source to <DIRECTORY>...
-[info] Running sandbox.Main
+[info] Compiling 1 Scala source to <DIRECTORY>/target/scala-2.12/classes ...
+[info] Done compiling.
+[info] Packaging <DIRECTORY>/target/scala-2.12/$name;format="lower,hyphen"$_2.12-0.0.1-SNAPSHOT.jar ...
+[info] Done packaging.
+[info] Running minimal.Main
 Hello Cats!
-[success]
+[success] Total time: 1 s, completed Mar 29, 2019 4:47:43 PM
 ```
 
 You can also start a *Scala console* (`scala>` prompt) to play with small snippets of code:
@@ -37,8 +44,7 @@ You can also start a *Scala console* (`scala>` prompt) to play with small snippe
 ```bash
 > console
 [info] Starting scala interpreter...
-[info]
-Welcome to Scala 2.12.3 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_112).
+Welcome to Scala 2.12.8 (OpenJDK 64-Bit Server VM, Java 1.8.0_202).
 Type in expressions for evaluation. Or try :help.
 
 scala> import cats._, cats.implicits._, cats.data._
